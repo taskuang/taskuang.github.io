@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tasman Kuang</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="assets/js/script.js"></script>
+    <meta charset="utf-8" />  
+
+</head>
+<body>
+<!-- banner -->
+<div class="banner">
+    <div class="container">
+        <div class="banner-content">
+            <div class="banner-info">
+                <h1>Hi I'm Tasman</h1>
+                <h2>Web developer and aspiring software engineer</h2>
+                <div id="contact-box"><a href="mailto:taskuang@berkeley.edu">let's chat</a></div>
+            </div>
+            <div class="banner-pic">
+                <img id = "tasman" src="assets/img/tasman.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- banner -->
+<!--about-->
+<div class="about">
+    <div class="container">
+        <div class="header">
+            <div class="title">About Me</div>
+        </div>
+        <p>I'm Tasman Kuang, a junior at UC Berkeley studying EECS.</p>
+    </div>
+</div>
+<!--about-->
+<!--projects-->
+<div class="projects">
+    <div class="gallery">
+        <div class="container">
+            <div class="header">
+                <div class="title">My Work</div>
+            </div>
+            <div class = "box">
+              <div class="slidercontainer">  
+                <div class="showSlide fade">  
+                  <div class="project-title">fisherandbagley.com</div>
+                    <img id="pic" src="assets/img/fisherandho.png" />  
+                      <div class="description">Developed web pages in React and built website using package manager for Node.js</div>
+                </div>  
+                <div class="showSlide fade">  
+                  <div class="project-title">CAM Education</div>
+                    <img id="pic"src="assets/img/cam.png" /> 
+                      <div class="description">Taught campers Minecraft modding using JavaScript and Python and animating with <br> Roblox Studio using Luau</div> 
+                </div>  
+          
+                <div class="showSlide fade">
+                  <div class="project-title">Philphix</div>  
+                    <img id="pic"src="assets/img/61c.jpg" /> 
+                      <div class="description">Developed a read-and-replace tool that stores a dictionary from a text file in a
+                        hashtable</div>
+            
+                </div>  
+                <div class="showSlide fade">
+                    <div class="project-title">NeuNet</div>
+                    <img id="pic" src="assets/img/neunet.jpg" />  
+                    <div class="description">Implements the Google Cloud Speech-to-text API to transform user voice input into string form. </div> 
+                    
+                </div>  
+                <!-- Navigation arrows -->  
+                <a class="left" onclick="nextSlide(-1)">❮</a>  
+                <a class="right" onclick="nextSlide(1)">❯</a>  
+            </div>  
+          
+            <script type="text/javascript">  
+                var slide_index = 1;  
+                displaySlides(slide_index);  
+          
+                function nextSlide(n) {  
+                    displaySlides(slide_index += n);  
+                }  
+          
+                function currentSlide(n) {  
+                    displaySlides(slide_index = n);  
+                }  
+          
+                function displaySlides(n) {  
+                    var i;  
+                    var slides = document.getElementsByClassName("showSlide");  
+                    if (n > slides.length) { slide_index = 1 }  
+                    if (n < 1) { slide_index = slides.length }  
+                    for (i = 0; i < slides.length; i++) {  
+                        slides[i].style.display = "none";  
+                    }  
+                    slides[slide_index - 1].style.display = "block";  
+                }  
+            </script> 
+            </div>
+            <div id="contact-box"><a href="https://drive.google.com/file/d/1h_GzX98uKkud062USMGhR1U4nz2ybfnD/view?usp=sharing">more</a></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+<!--projects-->
+<!--contact-->
+<ul class="contact">
+    <li class="google"><a href="mailto:taskuang@berkeley.edu"><i class="fa fa-google fa-2x" role="button"></i></a></li>
+    <li class="facebook"><a href="https://www.facebook.com/tasman.kuang.33"><i class="fa fa-facebook fa-2x" role="button"></i></a></li>
+    <li class="linkedin"><a href="https://www.linkedin.com/in/taskuang"><i class="fa fa-linkedin fa-2x" role="button"></i></a></li>
+    <li class="github"><a href="https://github.com/taskuang"><i class="fa fa-github fa-2x" role="button"></i></a></li>
+    <li class="instagram"><a href="https://www.instagram.com/tasman.kuang/"><i class="fa fa-instagram fa-2x" role="button"></i></a></li>
+</ul>
+<!--contact-->
+</body>
+</html>
